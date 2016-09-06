@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
+    <!-- Bootstrap -- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+
+        <body>
+
+          <div id="container">
+          </div>
+
+          <script type="text/babel">
+            var { Router,
+              Route,
+              IndexRoute,
+              IndexLink,
+              Link } = ReactRouter;
+
+              var destination = document.querySelector("#container");
+
+              var Home = React.createClass({
+                render: function() {
+                  return (
+                    <div>
+                      <div className="main col-xs-12 col-sm-8">
+
+                        <h2>Welcome to my portfolio site.</h2>
+                        <p>My name is Sean Parker.</p>
+                        <p>Discovering my love for web development in college, I made the transition from journalist to full time coder in 2012. As you can see by my resum&egrave;, I've worked in startups, corporate, and government organizations since then.</p>
+                        <p>I'm a team player who quickly picks up on how your organization works together, and a self starter who independently gets things done. </p>
+
+                        <p>Have a look around at my portfolio, github and linkedin to see how I can fit on your team.</p>
+                      </div>
+                    </div>
+                  );
+                }
+              });
+
+              var Contact = React.createClass({
+                render: function() {
+                  return (
+                    <div>
+                      <div className="main col-xs-12 col-sm-8">
+                        <h2>GOT QUESTIONS?</h2>
+                        <p>The easiest thing to do is post on
+                          our <a href="http://forum.kirupa.com">forums</a>.
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+              });
+
+              var Portfolio = React.createClass({
+                render: function() {
+                  return (
+                    <div>
+                      <div className="main col-xs-12 col-sm-8">
+
+                        <h2>Portfolio</h2>
+                        <p>Mauris sem velit, vehicula eget sodales vitae,
+                          rhoncus eget sapien:</p>
+                        <ol>
+                          <li>Nulla pulvinar diam</li>
+                          <li>Facilisis bibendum</li>
+                          <li>Vestibulum vulputate</li>
+                          <li>Eget erat</li>
+                          <li>Id porttitor</li>
+                        </ol>
+                      </div>
+                    </div>
+                  );
+                }
+              });
+
+            // Sidebar - infobox
+              var InfoBox = React.createClass({
+                render: function() {
+                  return (
+                      <div className="infobox col-xs-12 col-sm-4">
+                        <h2>Contact:</h2>
+                        <ul>
+                          <li><span class="glyphicon glyphicon-linked-in" aria-hidden="true"></span><b>Linkedin:</b> <a href="http://linkedin.com/in/seanrparker"></a> </li>
+                          <li><span class="glyphicon glyphicon-tint" aria-hidden="true"></span><b>Github:</b> <a href="http://github.com/seanrparker">/SeanRParker</a></li>
+                        </ul>
+                      </div>
+                  );
+                }
+              });
+
+            // App template
+              var App = React.createClass({
+                render: function() {
+                  return (
+                    <div>
+                      <h1 className="col-xs-12 col-md-4">Sean R. Parker</h1>
+                      <ul className="header col-xs-12 col-md-8">
+                        <li><IndexLink activeClassName="active" to="/">Home</IndexLink></li>
+                        <li><Link activeClassName="active" to="/web-design">Web Design</Link></li>
+                        <li><Link activeClassName="active" to="/contact">Contact</Link></li>
+                      </ul>
+                      <div className="content">
+                        {this.props.children}
+                      </div>
+                        <InfoBox/>
+                    </div>
+                  );
+                }
+              });
+
+
+              ReactDOM.render(
+                <Router>
+                  <Route path="/" component={App}>
+                    <IndexRoute component={Home}/>
+                    <Route path="web-design" component={Portfolio} />
+                    <Route path="contact" component={Contact} />
+                    </Route>
+                  </Router>,
+                destination
+              );
+              // The 'OLD' way (React 101)
+              // ReactDOM.render(
+              //   <div>
+              //     <App/>
+              //   </div>,
+              //   destination
+              // );
+            </script>
+          </body>
+
+        </html>
