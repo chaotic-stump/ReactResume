@@ -1,38 +1,115 @@
+/* Google Font imports - Open Sans, Lato */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+div#container {
+    top: 15%;
+    position: relative;
+}
 body {
-  background-color: #FFCC00;
-  padding: 20px;
-  margin: 0;
+  background: url(../images/LakeInFall.JPG) no-repeat, #1e1e1e;
+  background-size: cover;
+  padding: 15px;
+  width:90%;
+  height:100vh;
+  margin: 0 auto;
+  color:rgb(74,74,74);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
 h1, h2, p, ul, li {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight:400;
 }
+p, .main ul,{
+  padding-left:2em;
+}
+h2.logo{
+  font-family: 'Lora', serif;
+  font-size:59px;
+  font-weight: 400;
+  color: rgb(255, 251, 244);
+  text-shadow: 2px 2px 24px #000000;
+}
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size:23px;
+  font-weight:300;
+  color: rgb(175, 93, 56);
+}
+
+/* Nav */
 ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 ul.header {
-  background-color: #111;
   padding: 0;
+  text-align: right;
 }
 ul.header li a {
-  color: #FFF;
+  background-color: rgba(163, 188, 187, .94);
+  color: rgb(74,74,74);
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px 20px;
   display: inline-block;
+  border-left: 1px solid rgba(82, 82, 82, 0.5)
 }
-.active {
-  background-color: #0099FF;
+ul.header li:first-child a {
+  border-left:none;
 }
-.content {
-  background-color: #FFF;
+nav ul.header li a:hover{
+  background-color: rgb(173, 71, 25);
+  color:rgb(255,255,255);
+}
+nav ul.header li a.active {
+  color: rgb(173, 71, 25);
+}
+nav ul.header li a.active:hover {
+  color:rgb(255,255,255);
+}
+
+/* Content */
+.main, .infobox {
+  background-color: rgba(163, 188, 187, .94);
   padding: 20px;
 }
-.content h2 {
+h2 {
   padding: 0;
   margin: 0;
 }
-.content li {
+.main li {
   margin-bottom: 10px;
 }
+/* Carousel */
+.carousel-inner>.item {
+  background-color: rgba(0,0,0, .94);
+}
+.carousel-inner>.item>a>img{
+  margin:0 auto;
+}
+/* Infobox */
+.infobox ul li {
+  list-style-type: none;
+}
+.infobox{
+  margin:0;
+}
+/* Lists */
+ul {
+  padding: 0 15px;
+}
+/* Links */
+a {
+  color:rgb(173, 71, 25);
+}
+a:hover {
+  color:rgb(77, 129, 145);
+  text-decoration:none;
+}
+/* custom Bootstrap */

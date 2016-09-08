@@ -1,141 +1,256 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
     <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
-    <!-- Bootstrap -- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!-- Bootstrap -- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        </head>
 
-        <body>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          </head>
 
-          <div id="container">
-          </div>
+          <body>
 
-          <script type="text/babel">
-            var { Router,
-              Route,
-              IndexRoute,
-              IndexLink,
-              Link } = ReactRouter;
+            <div id="container" className="container-fluid">
+            </div>
 
-              var destination = document.querySelector("#container");
+            <script type="text/babel">
+              var { Router,
+                Route,
+                IndexRoute,
+                IndexLink,
+                Link } = ReactRouter;
 
-              var Home = React.createClass({
-                render: function() {
-                  return (
-                    <div>
-                      <div className="main col-xs-12 col-sm-8">
+                var destination = document.querySelector("#container");
 
-                        <h2>Welcome to my portfolio site.</h2>
-                        <p>My name is Sean Parker.</p>
-                        <p>Discovering my love for web development in college, I made the transition from journalist to full time coder in 2012. As you can see by my resum&egrave;, I've worked in startups, corporate, and government organizations since then.</p>
-                        <p>I'm a team player who quickly picks up on how your organization works together, and a self starter who independently gets things done. </p>
+                var Home = React.createClass({
+                  render: function() {
+                    return (
+                      <div className="col-xs-12 col-sm-8">
+                        <div className="main col-xs-12 col-sm-12">
 
-                        <p>Have a look around at my portfolio, github and linkedin to see how I can fit on your team.</p>
+                          <h2>Welcome to my portfolio site.</h2>
+                          <p>My name is Sean Parker.</p>
+                          <p>Discovering my love for web development in college, I made the transition from journalist to full time coder in 2012. As you can see by my resum&egrave;, I've worked in startups, corporate, and government organizations since then.</p>
+                          <p>I'm a team player who quickly picks up on how your organization works together, and a self starter who independently gets things done. </p>
+
+                          <p>Have a look around at my portfolio, github and linkedin to see how I can fit on your team.</p>
+                        </div>
                       </div>
-                    </div>
-                  );
-                }
-              });
+                    );
+                  }
+                });
 
-              var Contact = React.createClass({
-                render: function() {
-                  return (
-                    <div>
-                      <div className="main col-xs-12 col-sm-8">
-                        <h2>GOT QUESTIONS?</h2>
-                        <p>The easiest thing to do is post on
-                          our <a href="http://forum.kirupa.com">forums</a>.
-                        </p>
+                // Portfolio page
+                var Portfolio = React.createClass({
+                  render: function() {
+                    return (
+                      <div className="col-xs-12 col-sm-8">
+                        <div className="main col-xs-12 col-sm-12">
+                          <h2>Portfolio</h2>
+                          <p>Creating functional interfaces is one of my specialties. The sites in this gallery are custom themes built on WordPress through a Yootheme framework.</p>
+
+                          <p>Also, here's an example of an e-commerce redesign I did on my own time.</p>
+
+                          <ul className="">Epic Longboards:
+                              <li><a href="https://web.archive.org/web/20160311020159/http://epiclongboards.com/">Before</a>- (old site, built with tables)</li>
+                              <li><a href="http://epic.seanrparker.com/">After</a>- (new site on WordPress with WooCommerce plugin)</li>
+                          </ul>
+
+                          <div id="myCarousel" className="carousel slide" data-ride="carousel">
+
+
+                            { /* Wrapper for slides */ }
+                            <div className="carousel-inner" role="listbox">
+                              <div className="item bl-slide active">
+                                <a href="http://www.bell-law.com/" rel="nofollow" target="blank"><img src="images/Bell-Law.jpg" alt="Christopher John Designs screen shot" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://christopherjohndesigns.com" rel="nofollow" target="blank"><img src="images/Christopher-John-Design.jpg" alt="Christopher John Designs screen shot" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://collierpodiatry.com/" rel="nofollow" target="blank"><img src="images/Collier-Podiatry.jpg" alt="Collier Podiatry website screenshot" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://valleyoakdentalgroup.com/" rel="nofollow" target="blank"><img src="images/Valley-Oak.jpg" alt="Valley Oak Dental" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://arlingtonschoolofmusic.com/" rel="nofollow" target="blank"><img src="images/Arlington-School-of-Music.jpg" alt="Arlington School of Music" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://latahcreekfamilydentistry.com/" rel="nofollow" target="blank"><img src="images/Latah-Creek.jpg" alt="Latah Creek Family Dentistry" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://altaridge.com/" rel="nofollow" target="blank"><img src="images/Alta-Ridge.jpg" alt="Alta Ridge" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="https://web.archive.org/web/20150117075222/http://jklandscape.com/" rel="nofollow" target="blank"><img src="images/JK-Landscape.jpg" alt="JK Landscape" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://www.aabal.com/" rel="nofollow" target="blank"><img src="images/Aabal-Heating-Cooling.jpg" alt="Aabal Heating and Cooling" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://www.zoblaw.com/" rel="nofollow" target="blank"><img src="images/Zobrist-Law.jpg" alt="Zobrist Law" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://swfna.com/" rel="nofollow" target="blank"><img src="images/SWFNA.jpg" alt="South West Florida Neurosurgical Association" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://star-brite.com/" rel="nofollow" target="blank"><img src="images/Starbright.jpg" alt="Starbright" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://septictechnologies.com/" rel="nofollow" target="blank"><img src="images/Septic-Technologies.jpg" alt="Septic-Technologies" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://www.reliabletrans.com/" rel="nofollow" target="blank"><img src="images/Reliable-Transportation.jpg" alt="Reliable-Transportation" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://oandldoorsystems.com/" rel="nofollow" target="blank"><img src="images/O-L-Door.jpg" alt="O and L door systems" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://www.muellerinteriors.com/" rel="nofollow" target="blank"><img src="images/Mueller-Interiors.jpg" alt="Mueller Interiors" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://msglassoutlet.com/" rel="nofollow" target="blank"><img src="images/MS-Glass-Outlet.jpg" alt="MS Glass Outlet" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://modernpumpinc.com/" rel="nofollow" target="blank"><img src="images/Modern-Pump-Inc.jpg" alt="Modern Pump Incorporated" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://mccreapc.com" rel="nofollow" target="blank"><img src="images/McCrea-PC.jpg" alt="McCrea PC" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://kreislerlaw.com/" rel="nofollow" target="blank"><img src="images/Kreisler-Law.jpg" alt="Kreisler Law" /></a>
+                              </div>
+
+                              <div className="item">
+                                <a href="http://greshaminjurylaw.com/" rel="nofollow" target="blank"><img src="images/Gresham-Injury-Law.jpg" alt="Gresham Injury Law" /></a>
+                              </div>
+
+                            </div>
+
+
+
+                            {/*  Left and right controls */}
+                            <a className="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                              <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                              <span className="sr-only">Previous</span>
+                            </a>
+                            <a className="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                              <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                              <span className="sr-only">Next</span>
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  );
-                }
-              });
+                    );
+                  }
+                });
 
-              var Portfolio = React.createClass({
-                render: function() {
-                  return (
-                    <div>
-                      <div className="main col-xs-12 col-sm-8">
+                // Contact page
+                var Contact = React.createClass({
+                  render: function() {
+                    return (
+                      <div className="col-xs-12 col-sm-8">
+                        <div className="main col-xs-12 col-sm-12">
+                          <h2>GOT QUESTIONS?</h2>
+                          <p>The easiest thing to do is post on
+                            our <a href="http://forum.kirupa.com" rel="nofollow" target="_blank">forums</a>.
+                          </p>
+                        </div>
 
-                        <h2>Portfolio</h2>
-                        <p>Mauris sem velit, vehicula eget sodales vitae,
-                          rhoncus eget sapien:</p>
-                        <ol>
-                          <li>Nulla pulvinar diam</li>
-                          <li>Facilisis bibendum</li>
-                          <li>Vestibulum vulputate</li>
-                          <li>Eget erat</li>
-                          <li>Id porttitor</li>
-                        </ol>
                       </div>
-                    </div>
-                  );
-                }
-              });
+                    );
+                  }
+                });
 
-            // Sidebar - infobox
-              var InfoBox = React.createClass({
-                render: function() {
-                  return (
-                      <div className="infobox col-xs-12 col-sm-4">
-                        <h2>Contact:</h2>
-                        <ul>
-                          <li><span class="glyphicon glyphicon-linked-in" aria-hidden="true"></span><b>Linkedin:</b> <a href="http://linkedin.com/in/seanrparker"></a> </li>
-                          <li><span class="glyphicon glyphicon-tint" aria-hidden="true"></span><b>Github:</b> <a href="http://github.com/seanrparker">/SeanRParker</a></li>
-                        </ul>
+                // Sidebar - infobox
+                var InfoBox = React.createClass({
+                  render: function() {
+                    return (
+                      <div className="col-xs-12 col-sm-4">
+                        <div className="infobox col-xs-12 col-sm-12">
+                          <h2>Contact:</h2>
+                          <ul>
+                            <li><span className="glyphicon glyphicon-linked-in" aria-hidden="true"></span><b>Linkedin:</b> <a href="http://linkedin.com/in/seanrparker">/in/seanrparker</a> </li>
+                            <li><span className="glyphicon glyphicon-github" aria-hidden="true"></span><b>Github:</b> <a href="http://github.com/seanrparker">/SeanRParker</a></li>
+                          </ul>
+                        </div>
                       </div>
-                  );
-                }
-              });
+                    );
+                  }
+                });
 
-            // App template
-              var App = React.createClass({
-                render: function() {
-                  return (
-                    <div>
-                      <h1 className="col-xs-12 col-md-4">Sean R. Parker</h1>
-                      <ul className="header col-xs-12 col-md-8">
-                        <li><IndexLink activeClassName="active" to="/">Home</IndexLink></li>
-                        <li><Link activeClassName="active" to="/web-design">Web Design</Link></li>
-                        <li><Link activeClassName="active" to="/contact">Contact</Link></li>
-                      </ul>
-                      <div className="content">
-                        {this.props.children}
+                // App template
+                var App = React.createClass({
+                  render: function() {
+                    return (
+                      <div>
+                        <nav className="row">
+                          <div className="col-xs-12 col-sm-7">
+                            <h2 className="logo">Sean R. Parker</h2>
+                          </div>
+                          <div className="col-xs-12 col-sm-5">
+                            <ul className="header col-xs-12 col-sm-12">
+                              <li><IndexLink activeClassName="active" to="/">Home</IndexLink></li>
+                              <li><Link activeClassName="active" to="/web-design">Web Design</Link></li>
+                              <li><Link activeClassName="active" to="/contact">Contact</Link></li>
+                            </ul>
+                          </div>
+                        </nav>
+                        <div className="content row">
+                          {this.props.children}
+                          <InfoBox/>
+                        </div>
                       </div>
-                        <InfoBox/>
-                    </div>
-                  );
-                }
-              });
+                    );
+                  }
+                });
 
 
-              ReactDOM.render(
-                <Router>
-                  <Route path="/" component={App}>
-                    <IndexRoute component={Home}/>
-                    <Route path="web-design" component={Portfolio} />
-                    <Route path="contact" component={Contact} />
+                ReactDOM.render(
+                  <Router>
+                    <Route path="/" component={App}>
+                      <IndexRoute component={Home}/>
+                      <Route path="web-design" component={Portfolio} />
+                      <Route path="contact" component={Contact} />
                     </Route>
                   </Router>,
-                destination
-              );
-              // The 'OLD' way (React 101)
-              // ReactDOM.render(
-              //   <div>
-              //     <App/>
-              //   </div>,
-              //   destination
-              // );
-            </script>
-          </body>
+                  destination
+                );
+                // The 'OLD' way (React 101)
+                // ReactDOM.render(
+                //   <div>
+                //     <App/>
+                //   </div>,
+                //   destination
+                // );
+              </script>
+            </body>
 
-        </html>
+          </html>
