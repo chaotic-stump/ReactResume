@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Sean R. Parker – Full Stack Rails developer serving Winston-Salem, NC and the triad area</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
     <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
@@ -55,13 +57,6 @@
                         <div className="main col-xs-12 col-sm-12">
                           <h2>Portfolio</h2>
                           <p>Creating functional interfaces is one of my specialties. The sites in this gallery are custom themes built on WordPress through a Yootheme framework.</p>
-
-                          <p>Also, here's an example of an e-commerce redesign I did on my own time.</p>
-
-                          <ul className="">Epic Longboards:
-                              <li><a href="https://web.archive.org/web/20160311020159/http://epiclongboards.com/">Before</a>- (old site, built with tables)</li>
-                              <li><a href="http://epic.seanrparker.com/">After</a>- (new site on WordPress with WooCommerce plugin)</li>
-                          </ul>
 
                           <div id="myCarousel" className="carousel slide" data-ride="carousel">
 
@@ -172,16 +167,21 @@
                   }
                 });
 
-                // Contact page
-                var Contact = React.createClass({
+                // Other Work page
+                var otherWork = React.createClass({
                   render: function() {
                     return (
                       <div className="col-xs-12 col-sm-8">
                         <div className="main col-xs-12 col-sm-12">
-                          <h2>GOT QUESTIONS?</h2>
-                          <p>The easiest thing to do is post on
-                            our <a href="http://forum.kirupa.com" rel="nofollow" target="_blank">forums</a>.
-                          </p>
+                          <h2>OTHER WORK</h2>
+                            <p>An example of an e-commerce redesign I did on my own time.</p>
+
+                            <ul className="">Epic Longboards:
+                                <li><a href="https://web.archive.org/web/20160311020159/http://epiclongboards.com/">Before</a>- (old site, built with tables)</li>
+                                <li><a href="http://epic.seanrparker.com/">After</a>- (new site on WordPress with WooCommerce plugin)</li>
+                            </ul>
+
+
                         </div>
 
                       </div>
@@ -212,14 +212,14 @@
                     return (
                       <div>
                         <nav className="row">
-                          <div className="col-xs-12 col-sm-7">
-                            <h2 className="logo">Sean R. Parker</h2>
+                          <div className="col-xs-12 col-sm-6">
+                            <h2 className="logo"><IndexLink activeClassName="active" to="/">Sean R. Parker</IndexLink></h2>
                           </div>
-                          <div className="col-xs-12 col-sm-5">
+                          <div className="col-xs-12 col-sm-6">
                             <ul className="header col-xs-12 col-sm-12">
-                              <li><IndexLink activeClassName="active" to="/">Home</IndexLink></li>
+                              <li><a href="pdf/SeanParker2016.pdf" target="_blank">Resume</a></li>
                               <li><Link activeClassName="active" to="/web-design">Web Design</Link></li>
-                              <li><Link activeClassName="active" to="/contact">Contact</Link></li>
+                              <li><Link activeClassName="active" to="/other-work">Other Work</Link></li>
                             </ul>
                           </div>
                         </nav>
@@ -238,7 +238,7 @@
                     <Route path="/" component={App}>
                       <IndexRoute component={Home}/>
                       <Route path="web-design" component={Portfolio} />
-                      <Route path="contact" component={Contact} />
+                      <Route path="other-work" component={otherWork} />
                     </Route>
                   </Router>,
                   destination

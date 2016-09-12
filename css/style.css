@@ -3,7 +3,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lato';
 
 div#container {
-    top: 15%;
+    top: 10%;
     position: relative;
 }
 body {
@@ -25,7 +25,7 @@ h1, h2, p, ul, li {
 p, .main ul,{
   padding-left:2em;
 }
-h2.logo{
+h2.logo a{
   font-family: 'Lora', serif;
   font-size:59px;
   font-weight: 400;
@@ -44,7 +44,7 @@ ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 ul.header {
@@ -87,6 +87,9 @@ h2 {
   margin-bottom: 10px;
 }
 /* Carousel */
+.carousel-inner{
+      max-height: 600px;
+}
 .carousel-inner>.item {
   background-color: rgba(0,0,0, .94);
 }
