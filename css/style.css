@@ -3,8 +3,8 @@
 @import 'https://fonts.googleapis.com/css?family=Lato';
 
 div#container {
-    top: 10%;
-    position: relative;
+  top: 10%;
+  position: relative;
 }
 body {
   background: url(../images/LakeInFall.JPG) no-repeat, #1e1e1e;
@@ -27,10 +27,11 @@ p, .main ul,{
 }
 h2.logo a{
   font-family: 'Lora', serif;
-  font-size:59px;
+  font-size:55px;
   font-weight: 400;
   color: rgb(255, 251, 244);
   text-shadow: 2px 2px 24px #000000;
+  text-decoration:none;
 }
 h2{
   font-family: 'Open Sans', sans-serif;
@@ -56,7 +57,7 @@ ul.header li a {
   color: rgb(74,74,74);
   font-weight: bold;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 18px;
   display: inline-block;
   border-left: 1px solid rgba(82, 82, 82, 0.5)
 }
@@ -86,9 +87,19 @@ h2 {
 .main li {
   margin-bottom: 10px;
 }
+p b {
+  font-weight:700;
+  font-size:18px;
+}
+p {
+  padding:0 0 0 15px;
+}
+.main:first-child p {
+  padding-top:15px;
+}
 /* Carousel */
 .carousel-inner{
-      max-height: 600px;
+  max-height: 600px;
 }
 .carousel-inner>.item {
   background-color: rgba(0,0,0, .94);
@@ -104,8 +115,11 @@ h2 {
   margin:0;
 }
 /* Lists */
-ul {
-  padding: 0 15px;
+.main ul {
+  padding: 0px 45px;
+}
+.infobox ul {
+    padding: 10px 0 0 10px;
 }
 /* Links */
 a {
@@ -115,4 +129,46 @@ a:hover {
   color:rgb(77, 129, 145);
   text-decoration:none;
 }
-/* custom Bootstrap */
+/* Epic Longboards site rebuild */
+.epicRedesign img{
+  max-width:100%;
+}
+.epicNew a:last-child {
+    position: relative;
+    top: 22px;
+}
+
+/* Media Queries - Responsive CSS */
+@media screen and (min-width: 480px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:67px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:72px;
+  }
+
+  ul.header li{
+    font-size:12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:52px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:72px;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
