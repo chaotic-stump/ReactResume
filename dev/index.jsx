@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {IndexRoute, IndexLink, Link, hashHistory, Router, Route} from 'react-router';
 
+
   var destination = document.querySelector("#container");
 
   var Home = React.createClass({
