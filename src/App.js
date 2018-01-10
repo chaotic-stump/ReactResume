@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter,
-  History,
-  Router,
   Route,
-  Link,
   Switch,
 } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import '../src/assets/style.css'
 import Nav from './containers/Nav.js'

@@ -5,6 +5,12 @@ import EpicBefore from '../assets/images/oldEpicBoards.png'
 import EpicAfter from '../assets/images/newEpicBoards.png'
 import EpicCategory from '../assets/images/epicNewCategory.png'
 
+// Design samples
+import AdBook from '../assets/Booklet.pdf'
+import GenMills from '../assets/GenMillsFlier.pdf'
+import InfoKit from '../assets/InfoKitSample.pdf'
+
+
 const OtherWork = () => (
   <div className="col-xs-12 col-sm-8">
     <div className="main col-xs-12 col-sm-12">
@@ -12,9 +18,9 @@ const OtherWork = () => (
       <p>Along with web development I have a varied skillset in other areas.</p>
       <ul>
         <li>As Editor-in-Chief and Managing Editor at BYU-Idaho's newspaper, The Scroll, I oversaw the visual layout/design of a weekly publication.</li>
-        <li>SEO Account Manager for 3 months - Google Analytics, Place Listings and Keywork Research.</li>
-        <li>Basic Graphic Design - <a href="images/GenMillsFlier.pdf" target="_blank">brochure</a> and <a href="images/InfoKitSample.pdf" target="_blank">infokit</a> built in Adobe Illustrator.</li>
-        <li>Team Leader for the winning <a href="images/Booklet.pdf">ad campaign</a> in my Advertising class. Which I laid out with Adobe InDesign.</li>
+        <li>SEO Account Manager for 3 months - Google Analytics, Place Listings and Keyword Research.</li>
+        <li>Basic Graphic Design - <a href={GenMills} target="_blank">brochure</a> and <a href={InfoKit} target="_blank">infokit</a> built in Adobe Illustrator.</li>
+        <li>Team Leader for the winning <a href={AdBook} target="_blank">ad campaign</a> in my Advertising class. Which I laid out with Adobe InDesign.</li>
       </ul>
 
       <p>An example of an e-commerce redesign I did on my own time, where I also designed the visual components in Photoshop to match the theme of existing images from the old site. The old site was built with html tables. A practice that has been outdated for several years.</p>
