@@ -1,13 +1,9 @@
 console.log('App.js is running!');
-// if statements
-// ternary operators
-// logical and operators
-
 
 // JSX = JavaScript XML
 var app = {
   title: 'Indecision App',
-  // subtitle: 'Put your life in the hands of a computer!',
+  subtitle: 'Put your life in the hands of a computer!',
   options: ['One', 'Two']
 }
 
