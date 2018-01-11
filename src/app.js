@@ -1,4 +1,8 @@
 console.log('App.js is running!');
+// if statements
+// ternary operators
+// logical and operators
+
 
 // JSX = JavaScript XML
 var app = {
@@ -19,18 +23,23 @@ var template = (
 
 var user = {
   name: 'Sean',
-  age: 30,
-  location: 'Arlington, VA'
+  age: 30
 };
+
+function getLocation(location) {
+  if (location) {
+    return <p>Location: {location}</p>;
+  }
+}
 
 var templateTwo = (
   <div>
     <h1>{user.name}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {user.location}</p>
+    {getLocation(user.location)}
   </div>
 )
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

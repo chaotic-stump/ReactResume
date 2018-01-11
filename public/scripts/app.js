@@ -1,6 +1,10 @@
 'use strict';
 
 console.log('App.js is running!');
+// if statements
+// ternary operators
+// logical and operators
+
 
 // JSX = JavaScript XML
 var app = {
@@ -39,9 +43,19 @@ var template = React.createElement(
 
 var user = {
   name: 'Sean',
-  age: 30,
-  location: 'Arlington, VA'
+  age: 30
 };
+
+function getLocation(location) {
+  if (location) {
+    return React.createElement(
+      'p',
+      null,
+      'Location: ',
+      location
+    );
+  }
+}
 
 var templateTwo = React.createElement(
   'div',
@@ -57,14 +71,9 @@ var templateTwo = React.createElement(
     'Age: ',
     user.age
   ),
-  React.createElement(
-    'p',
-    null,
-    'Location: ',
-    user.location
-  )
+  getLocation(user.location)
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
