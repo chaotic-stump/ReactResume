@@ -1,37 +1,78 @@
 'use strict';
 
-// Let and Const vs Var
+console.log('App.js is running!');
 
-var nameVar = 'Sean';
-nameVar = 'Mike';
-console.log('nameVar', nameVar);
+// JSX = JavaScript XML
+var app = {
+  title: 'Indecision App',
+  subtitle: 'Put your life in the hands of a computer!',
+  options: ['One', 'Two']
+};
 
-// Let
-var nameLet = 'Jen';
-nameLet = 'Julie';
-console.log('nameLet', nameLet);
+var template = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  app.subtitle && React.createElement(
+    'p',
+    null,
+    app.subtitle
+  ),
+  app.options.length > 0 ? "Here are your options" : "No options",
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'Item One'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'Item Two'
+    )
+  )
+);
 
-// Const
-var nameConst = 'Frank';
-console.log('nameConst', nameConst);
+var user = {
+  name: "Sean",
+  age: 30,
+  location: "Arlington, VA"
+};
 
-// Returns a RefError
-// function getPetName() {
-//   var petName = 'Hal';
-//   return petName;
-// }
-
-// getPetName();
-// console.log(petName);
-
-// Block level scoping
-var fullName = 'Jen Parker';
-var firstName = void 0;
-
-if (fullName) {
-  var _firstName = fullName.split(' ')[0];
-  console.log(_firstName);
+function getLocation(location) {
+  if (location) {
+    return React.createElement(
+      'p',
+      null,
+      'Location: ',
+      location
+    );
+  }
 }
 
-// scoped outside of function
-console.log(firstName);
+var templateTwo = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    user.name ? user.name : 'Anonymous'
+  ),
+  user.age && user.age >= 18 && React.createElement(
+    'p',
+    null,
+    'Age: ',
+    user.age
+  ),
+  getLocation(user.location)
+);
+
+var appRoot = document.getElementById('app');
+
+ReactDOM.render(template, appRoot);
