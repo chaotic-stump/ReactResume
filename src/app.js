@@ -12,6 +12,8 @@
 // console.log(canDrink(20));
 // console.log(isSenior(64));
 
-import validator from 'validator';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(validator.isEmail('test@gmail.com'));
+const template = React.createElement('p', {}, 'testing 123');
+ReactDOM.render(template, document.getElementById('app'));
