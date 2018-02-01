@@ -14,7 +14,7 @@ handleDeleteOptions = () => {
   this.setState(() => ({ options: [] }));
 }
 
-handleDeleteOption = ( optionToRemove) => {
+handleDeleteOption = (optionToRemove) => {
   this.setState(prevState => ({
     options: prevState.options.filter(option => {
       return optionToRemove !== option;
