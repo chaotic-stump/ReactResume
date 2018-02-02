@@ -1,0 +1,175 @@
+/* Google Font imports - Open Sans, Lato */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+div#container {
+  top: 10%;
+  position: relative;
+}
+body {
+  background: url(../assets/images/LakeInFall.jpg) no-repeat, #1e1e1e;
+  background-size: cover;
+  padding: 15px;
+  width:90%;
+  height:100vh;
+  margin: 0 auto;
+  color:rgb(74,74,74);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+h1, h2, p, ul, li {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight:400;
+}
+p, .main ul,{
+  padding-left:2em;
+}
+h2.logo a{
+  font-family: 'Lora', serif;
+  font-size:55px;
+  font-weight: 400;
+  color: rgb(255, 251, 244);
+  text-shadow: 2px 2px 24px #000000;
+  text-decoration:none;
+}
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size:23px;
+  font-weight:300;
+  color: rgb(175, 93, 56);
+}
+
+/* Nav */
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+ul.header {
+  padding: 0;
+  text-align: right;
+}
+ul.header li a {
+  background-color: rgba(163, 188, 187, .94);
+  color: rgb(74,74,74);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 18px;
+  display: inline-block;
+  border-left: 1px solid rgba(82, 82, 82, 0.5)
+}
+ul.header li:first-child a {
+  border-left:none;
+}
+nav ul.header li a:hover{
+  background-color: rgb(173, 71, 25);
+  color:rgb(255,255,255);
+}
+nav ul.header li a.active {
+  color: rgb(173, 71, 25);
+}
+nav ul.header li a.active:hover {
+  color:rgb(255,255,255);
+}
+
+/* Content */
+.main, .infobox {
+  background-color: rgba(163, 188, 187, .94);
+  padding: 20px;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
+.main li {
+  margin-bottom: 10px;
+}
+p b {
+  font-weight:700;
+  font-size:18px;
+}
+p {
+  padding:0 0 0 15px;
+}
+.main:first-child p {
+  padding-top:15px;
+}
+/* Carousel */
+.carousel-inner{
+  max-height: 600px;
+}
+.carousel-inner>.item {
+  background-color: rgba(0,0,0, .94);
+}
+.carousel-inner>.item>a>img{
+  margin:0 auto;
+}
+/* Infobox */
+.infobox ul li {
+  list-style-type: none;
+}
+.infobox{
+  margin:0;
+}
+/* Lists */
+.main ul {
+  padding: 0px 45px;
+}
+.infobox ul {
+    padding: 10px 0 0 10px;
+}
+/* Links */
+a {
+  color:rgb(173, 71, 25);
+}
+a:hover {
+  color:rgb(77, 129, 145);
+  text-decoration:none;
+}
+/* Epic Longboards site rebuild */
+.epicRedesign img{
+  max-width:100%;
+}
+.epicNew a:last-child {
+    position: relative;
+    top: 22px;
+}
+
+/* Media Queries - Responsive CSS */
+@media screen and (min-width: 480px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:67px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:72px;
+  }
+
+  ul.header li{
+    font-size:12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:52px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Main logo */
+  h2.logo a{
+    font-size:72px;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+}

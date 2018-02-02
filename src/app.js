@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import IndecisionApp from "./components/IndecisionApp";
+import PortfolioApp from "./components/PortfolioApp";
+import './styles/style.css';
 
 
-ReactDOM.render(<IndecisionApp />, document.getElementById("app")
+ReactDOM.render(<PortfolioApp />, document.getElementById("app")
 );
