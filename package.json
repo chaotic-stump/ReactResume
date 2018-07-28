@@ -1,38 +1,18 @@
 {
-  "name": "reactportfolio",
-  "version": "1.0.0",
-  "description": "Responsive portfolio built in React.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SeanRParker/ReactResume.git"
-  },
-  "keywords": [
-    "React",
-    "responsive"
-  ],
-  "author": "Sean Parker",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SeanRParker/ReactResume/issues"
-  },
-  "homepage": "https://github.com/SeanRParker/ReactResume#readme",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "history": "^4.3.0",
-    "webpack": "^1.13.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.4"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  },
-  "devDependencies": {}
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
