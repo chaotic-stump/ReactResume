@@ -1,28 +1,28 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "eslint": ">=4.18.2",
-    "handlebars": ">=4.0.14",
-    "js-yaml": ">=3.13.1",
-    "lodash": ">=4.17.13",
-    "lodash.template": ">=4.5.0",
-    "mem": ">=4.0.0",
-    "merge": "^1.2.1",
-    "react": "^16.8.6",
-    "react-dev-utils": ">=5.0.2",
-    "react-dom": "^16.8.6",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "^1.1.4",
-    "url-parse": "^1.4.3",
-    "webpack-dev-server": ">=3.1.11"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"eslint": ">=4.18.2",
+		"handlebars": ">=4.0.14",
+		"js-yaml": ">=3.13.1",
+		"lodash": ">=4.17.13",
+		"lodash.template": ">=4.5.0",
+		"mem": ">=4.0.0",
+		"merge": "^1.2.1",
+		"react": "^16.8.6",
+		"react-dev-utils": ">=5.0.2",
+		"react-dom": "^16.8.6",
+		"react-router": "^4.3.1",
+		"react-router-dom": "^4.2.2",
+		"react-scripts": "^3.2.0",
+		"url-parse": "^1.4.3",
+		"webpack-dev-server": ">=3.1.11"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
 }
